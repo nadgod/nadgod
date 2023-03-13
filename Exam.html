@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <style>
+        div>p>label>input{width: 350px;}
+    </style>
+</head>
+<body>
+
+<form>
+    <p> длина эмо челки тимошенко<br>
+    <label>
+    <input type="radio" name="HP" value="см">
+    10000000000см
+    <br>
+    <label>
+    <input type="radio" name="HP" value="Nor">
+    1000000000000000000000м</label>
+    <br>
+    <label>
+    <input type="radio" name="HP" value="endless">
+    бесконечная</label>
+    <br>
+    <label>
+    <input type="radio" name="HP" value="Ser">
+    дофига</label>
+    </p>
+    <label for="AD">избавиться огт шизы можно с помощью...</label><br>
+        <select name="AD" id="select">
+        <option value="Adr">аниме</option>
+        <option value="Ser">карт</option>
+        <option value="Dof">уно</opticn>
+        </select>
+        <p>сколько мне нужно сьесть чтобы наесться</p><br>
+            <label>
+        <input type="checkbox" name="precipitation[]" value="Adr">
+        много</label>
+        <br>
+        <label>
+        <input type="checkbox" name="precipitation[]" value="Test">
+        это не возможно</label>
+        <br>
+        <label>
+        <input type="checkbox" name="precipitation[]" value="Nor">
+        30 тарелок пельменей</label>
+        <br>
+        </p><br>
+        <label for="q1">продукция от бигбана</label><br>
+        <select name="q1" id="select1">
+        <option value="null"></option>
+        <option value="Ответ1-1">соус татар</option>
+        <option value="Ответ1-2">сухарики "молодой бойло"</opticn>
+        <option value="Ответ1-3">гозированный напиток "Анна беспощадная"</option>
+
+        </select><br>
+        <label for="q2">что делать если вас укусил богдан</label><br>
+        <select name="q2" id="select1">
+        <option value="null"></option>
+        <option value="Ответ2-1">умереть</option>
+        <option value="Ответ2-2">продезенфицировать место укуса</opticn>
+        <option value="Ответ2-3">отрезать место укуса</option>
+
+        </select><br>
+        <label for="q3">bc -</label><br>
+        <select name="q3" id="select1">
+        <option value="null"></option>
+        <option value="Ответ3-1">the bigban company </option>
+        <option value="Ответ3-2">dolar and evro</opticn>
+        </select>
+        <p>К memes относяться:<br>
+            <label>
+        <input type="checkbox" name="q4[]" value="Ответ4-1">
+        eggman's uncomment</label>
+        <br>
+        <label>
+        <input type="checkbox" name="q4[]" value="Ответ4-2">
+        the MY LASER PEES</label>
+        <br>
+        <label>
+        <input type="checkbox" name="q4[]" value="Ответ4-3">
+        ДЕНЬГИ</label>
+        <br>
+        </p>
+        <p>К заболеваниям тимошенко<br>
+            <label>
+        <input type="checkbox" name="q5[]" value="Ответ5-1">
+        чертильность</label>
+        <br>
+        <label>
+        <input type="checkbox" name="q5[]" value="Ответ5-2">
+        херасосность</label>
+        <br>
+        <label>
+        <input type="checkbox" name="q5[]" value="Ответ5-3">
+        тупизм бесконечной степени</label>
+        <br>
+        </p>
+        <p>В наше время раса богданов:<br>
+            <label>
+        <input type="checkbox" name="q6[]" value="Ответ6-1">
+        создали машину времени</label>
+        <br>
+        <label>
+        <input type="checkbox" name="q6[]" value="Ответ6-2">
+        обработали маму тимошенко</label>
+        <br>
+        <label>
+        <input type="checkbox" name="q6[]" value="Ответ6-3">
+        молятся сухарикам "молодой бойло"</label>
+        <br>
+        </p>
+        <div>
+        <p>
+            <label>
+                <input type="text" value="я сьел тимошенко и " id="an"> 
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="text" value="Аскорбиновая кислота -" id="an1">
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="text" value="При нагревании моих нервов" id="an2">
+            </label></div>
+        </p>
+        <p>
+        <input type="button" id="calc" value="Подсчитать результаты">
+        <input type="reset" value="Сброс">
+        </p>
+        Итого баллов: <input type="text" name="result" readonly>
+        </form>
+        <script>
+            calc.onclick = function(){
+            var myform = this.form,
+            chbx = myform['precipitation[]'],
+            chbx1 = myform['q4[]'],
+            chbx2 = myform['q5[]'],
+            chbx3 = myform['q6[]'],
+            inp=document.getElementById('an'),
+            inp1=document.getElementById('an1'),
+            inp2=document.getElementById('an2'),
+            sum = 0;
+            for(var i = 0; i < chbx.length; i++){
+            if(chbx[i].checked && (chbx[i].value == 'Adr' || chbx[i].value == 'Test'))
+            sum++;
+            }
+            if(myform.HP.value =='endless') sum++;
+            if(myform.AD.value == 'Ser') sum++;
+            if(myform.q1.value == 'Ответ1-1') sum++;
+            if(myform.q2.value == 'Ответ2-2') sum++;
+            if(myform.q3.value == 'Ответ3-1') sum++;
+            for(var i = 0; i < chbx1.length; i++){
+            if(chbx1[i].checked && (chbx1[i].value == 'Ответ4-3' || chbx1[i].value == 'Ответ4-1'))
+            sum++;
+            }
+            for(var i = 0; i < chbx2.length; i++){
+            if(chbx2[i].checked && (chbx2[i].value == 'Ответ5-1' || chbx2[i].value == 'Ответ5-2'))
+            sum++;
+            }
+            for(var i = 0; i < chbx3.length; i++){
+            if(chbx3[i].checked && (chbx3[i].value == 'Ответ6-3' || chbx3[i].value == 'Ответ6-1'))
+            sum++;
+            }
+            if(inp.value=="отравился") sum++;
+            if(inp1.value=="вкусный напиток") sum++;
+            if(inp2.value=="земля нахуй лопнет от той злости что из ме5ня выйдет") sum++;
+            myform.result.value = sum;
+            }
+        </script>
+
+</body>
+</html>
